@@ -1,0 +1,304 @@
+\documentclass[a4paper,12pt,twoside]{article}
+\usepackage[inner=3cm, outer=1.2cm, top=1.2cm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+
+\newcommand{\kep}[1]{\includegraphics[width=0.5\textwidth]{#1}}
+
+% dotted TOC
+\usepackage{tocloft}
+\renewcommand\cftsecdotsep{\cftdot}
+
+\title{Sudoku}
+\author{sudoku.com után}
+ 
+\begin{document}
+ 
+\maketitle
+
+\section{Szabályok}
+
+Mi az a Sudoku, és mik ennek a játéknak a szabályai?
+
+A Sudoku egy népszerű logikai rejtvény számokkal. A szabályai meglehetősen egyszerűek, így a kezdők is megbirkóznak az egyszerű feladványokkal.
+
+Melyek a Sudoku alapszabályai?
+
+\begin{itemize}
+    \item A Sudoku rács 9x9 szóközből áll.
+    \item Csak 1 és 9 közötti számokat használhat.
+    \item Minden 3×3-as blokk csak 1-től 9-ig terjedő számokat tartalmazhat.
+    \item Minden függőleges oszlop csak 1-től 9-ig terjedő számokat tartalmazhat.
+    \item Minden vízszintes sor csak 1 és 9 közötti számokat tartalmazhat.
+    \item A 3×3-as blokkban, függőleges oszlopban vagy vízszintes sorban minden szám csak egyszer használható.
+    \item A játéknak akkor van vége, ha az egész Sudoku rács helyesen van kitöltve számokkal.
+\end{itemize}
+
+Az egyszerű Sudoku rejtvényekben sok szám van megadva a rácson. Ezért nem nehéz megbirkózni az ilyen feladványokkal, ha ismeri az alapvető szabályokat. A nehezebb feladványok megoldásához és gyors kitöltéséhez azonban be kell vetnie néhány trükköt, és meg kell tanulnia a haladó Sudoku technikákat.
+
+\clearpage
+\section{Stratégiák}
+
+\subsection{Az ,,utolsó üres cella'' technika}
+
+Az ,,utolsó üres cella'' egy alapvető Sudoku megoldási technika. Nagyon egyszerű és azon a tényen alapul, hogy a Sudoku rácson minden 3 × 3-as blokk, függőleges oszlop vagy vízszintes sor 1-től 9-ig terjedő számokat tartalmaz, és minden szám csak egyszer fordulhat elő a 3 × 3-as blokkban, a függőleges oszlopban és a vízszintes sorban is.
+ 
+Ezért ha azt látjuk, hogy a 3×3-as blokkban, függőleges oszlopban vagy vízszintes sorban már csak egy üres cella maradt, akkor meg kell határoznunk hogy 1-től 9-ig melyik szám hiányzik, és ebbe az üres cellába azt kell beírni. 
+
+Az alábbi példákban láthatja, hogyan néz ki. 
+
+\kep{1646980448-1. Last Free Cell_1.png}
+\kep{1646980448-1. Last Free Cell_2.png}
+
+\kep{1646980448-1. Last Free Cell_3.png}
+\kep{1646980448-1. Last Free Cell_4.png}
+
+Ez a fő megoldási módszer. Miután megtanulta, folytathatja a következő Sudoku stratégiákkal. 
+
+\subsection{Az ,,utoljára maradt cella'' technika}
+
+Az ,,utoljára maradt cella'' egy másik egyszerű Sudoku-stratégia. Ez azon a tényen alapul, hogy a számok nem ismétlődnek a 3×3-as blokkban, függőleges oszlopban és vízszintes sorban.
+
+Nézzünk egy példát a 3x3-as blokkra. A 8-as számnak szerepelnie kell minden blokkban, oszlopban és sorban is. A 8-as már megvan az oszlopban és a sorban. Mint már tudjuk, a számokat nem szabad ismételni. Tehát a 8-ast nem írhatjuk be ismét oda. Ez azt jelenti, hogy a blokkon belül már csak egy cella maradt tehát a 8-as számot oda kell beírni.
+
+\kep{1646980980-2. Last remaining cell_1.png}
+\kep{1646980980-2. Last remaining cell_2.png}
+
+Ugyanez a módszer alkalmazható a sorokra és az oszlopokra is.
+
+Így használható az ,,Utoljára maradt cella'' technika a Sudoku megoldása során. Miután megtanulta, folytathatja a következő Sudoku stratégiákkal.
+
+\clearpage
+\subsection{Az ,,utolsó lehetséges szám'' technika}
+
+Az ,,Utolsó lehetséges szám'' egy egyszerű stratégia, amely a kezdőknek is megfelelő. A hiányzó szám megtalálásán alapul. A hiányzó szám megtalálásához vizsgálja meg az Önt érdeklő 3x3-as blokkban, illetve a hozzá kapcsolódó sorokban és oszlopokban már meglévő számokat!
+
+Nézzünk egy példát!
+
+\kep{1646981460-3. Last possible number_1.png}
+\kep{1646981459-3. Last possible number_2.png}
+
+Figyelje a kiemelt cellát! Nézze meg a számokat a blokkban, a sorában és az oszlopában is. Láthatjuk, hogy az 1,2,3,4,6,7,8,9 számokat már felhasználtuk ebben a sorban, oszlopban és blokkban.
+
+Az egyetlen hiányzó szám az 5-ös. Tekintettel arra, hogy a számokat nem szabad ismételni, így az egyetlen szám, amelyet ebbe a cellába kell írni, az az 5-ös.
+
+Így működik az ,,utolsó lehetséges szám'' technika. Miután elsajátítottad, könnyebben és gyorsabban fogod megoldani a Sudoku-t!
+
+\subsection{Jegyzetek a Sudokuban}
+
+Ha elakad a Sudoku rácson, és nem látja a kézenfekvő megoldásokat a többi cella esetében, használjon jegyzeteket! A jegyzetek segítségével minden üres cellához be kell írni az összes lehetséges számjegyet – a Sudoku rácson már szereplő számokra összpontosítva.
+
+Nagyon fontos a Jegyzetek helyes kitöltése. Mivel ha hibázik, sokkal nehezebb és hosszabb lesz a Sudoku megoldása.
+
+Amikor elhelyezi a jegyzeteket, könnyebben megértheti, hová és milyen számot kell elhelyezni. Emellett számos fejlett Sudoku megoldási technika a jegyzetek használatán alapul. (Az ilyen technikákat megismerheti a Sudoku.com webhelyünkön található leckékből.)
+
+
+\subsection{,,Nyilvánvaló szinglik'' technika}
+
+Ez a stratégia a helyesen elhelyezett jegyzeteken alapul. Néha meztelen szingliknek is szokás nevezni. A lényeg az, hogy egy adott cellában csak egy számjegy maradhat (a jegyzetelt számjegyek közül).
+
+Nézzük meg ezt az esetet egy példán keresztül!
+
+\kep{1646982336-5. Obvious singles_1.png}
+\kep{1646982336-5. Obvious singles_2.png}
+
+Nézzük a kiemelt cellát! Láthatjuk, hogy ez csak egy Megjegyzés - 2-es számmal van kitöltve. Ez azt jelenti, hogy ennek a cellának csak egy lehetséges megoldása van. Mivel ez az egyetlen lehetséges opció, ez a cella 2 lesz. Így ebből a cellából eltávolítjuk a Jegyzetet, és kitöltjük a 2-es számmal.
+
+Így működik az ,,Nyilvánvaló szinglik'' technika. Amint látja, ez nem olyan nehéz, mint amilyennek elsőre látszik. Ezért, ha a ,,Nyilvánvaló szinglik'' technikát a gyakorlatban alkalmazza, a Sudoku megoldásának folyamata könnyebbé és gyorsabbá válik!
+
+\clearpage
+\subsection{,,Nyilvánvaló párok'' technika}
+
+Az ,,Nyilvánvaló szinglik'' technikához hasonlóan a ,,Nyilvánvaló párok'' is a  jegyzetek helyes elhelyezésén alapul. A lényeg az, hogy a 3x3-as blokkon belül 2 cellát kell találni, amelyekben ugyanaz a jegyzetpár. Ez azt jelenti, hogy ezek a jegyzetpárok nem használhatók más cellákban ezen a 3x3-as blokkon belül. Így eltávolíthatók a jegyzetei közül. Könnyebb lesz megérteni ezt a stratégiát, ha megnézi a példát.
+
+Nézzük ezt a blokkot! Üres cellákat látunk, amelyek tele vannak lehetséges számjegyekkel. Közülük van két cella, amelyek 7-et vagy 9-et tartalmaznak.
+
+Ez azt jelenti, hogy ezen cellák egyike szükségszerűen 7-et, a másik 9-et tartalmaz. Ez azt is jelenti, hogy ennek a blokknak a többi cellájában nem lehet 7 és 9.
+
+\kep{1646982773-6. Obvious pairs.png}
+
+Ezért eltávolítjuk őket más cellák jegyzeteiből. Ezután alkalmazhatjuk az előző leckében tanult ,,Nyilvánvaló szinglik'' szabályt. 6-ot írunk a cellába egyetlen 6-os számmal, és 4-et egy másikba.
+
+Így használható a ,,Nyilvánvaló párok'' technika a Sudoku megoldása során. Miután megtanulta, folytathatja a következő Sudoku stratégiákat.
+
+
+\subsection{"Nyilvánvaló hármas" technika}
+
+Ez a Sudoku megoldási technika az előzőre épül – ,,Nyilvánvaló párokra''. De a ,,Nyilvánvaló hármasok'' nem a Jegyzetek két számán, hanem háromon alapul. Ez az egyetlen különbség. A jobb megértéshez vessünk egy pillantást a példára.
+
+Nézd meg a bal felső blokkot! Három alsó cellája 1-es, 5-ös számjegyeket tartalmaz; 1, 8 és 5, 8. Ez azt jelenti, hogy ezekben a cellákban van 1, 5 és 8, de még nem tudjuk, hogy az egyes számok pontosan hol vannak. Amit azonban tudunk, az az, hogy 1, 5 és 8 nem lehet ennek a blokknak a többi cellájában.
+
+Tehát eltávolíthatjuk őket a jegyzetekből.
+
+\kep{1646983350-7. Obvious triples_1.png}
+\kep{1646983351-7. Obvious triples_2.png}
+
+\kep{1646983350-7. Obvious triples_3.png}
+
+Így működik az ,,Nyilvánvaló hármas'' technika a Sudoku megoldása közben.
+
+\clearpage
+\subsection{,,Rejtett szinglik'' technika}
+
+A ,,Rejtett szinglik'' egy meglehetősen egyszerű Sudoku technika. A ,,Rejtett szinglik'' lényege, hogy a bejegyzés az egyetlen ilyen egy teljes sorban, oszlopban vagy 3x3-as blokkban. Ez a technika azonban gondos odafigyelést igényel a játékostól, mert elég nehéz lehet észrevenni az egyetlen bejegyzést.
+
+Könnyebb lesz megérteni ezt a technikát, ha megnézi a példát.
+
+Figyeljünk erre a 3x3-as blokkra a Jegyzetekkel. Csak egy cella van, amely tartalmazhatja az 1-es számot. Ez a jobb felső cella. Ebben a blokkban nincs más cella az 1. megjegyzéssel.
+
+\kep{1646984732-8. Hidden singles_1.png}
+\kep{1646984732-8. Hidden singles_2.png}
+
+Így eltávolíthatjuk az összes jegyzetet ebből a cellából, és helyette az 1-es számot írhatjuk be, mivel ez az egyetlen lehetséges lehetőség.
+Ennyit a ,,Rejtett szinglik'' technikáról! Miután megtanulta, folytathatja a következő Sudoku stratégiákat.
+
+
+
+\subsection{,,Rejtett párok'' technika}
+
+A ,,Rejtett párok'' technika ugyanúgy működik, mint a ,,Rejtett szinglik''. Az egyetlen dolog, ami változik, az a cellák és a megjegyzések száma. Ha talál két olyan cellát egy sorban, oszlopban vagy 3x3-as blokkon belül, ahol két megjegyzés nem jelenik meg ezeken a cellákon kívül, akkor ezt a két megjegyzést a két cellában kell elhelyezni. Az összes többi jegyzet eltávolítható ebből a két cellából.
+
+Például:
+
+Figyeljünk erre a blokkra a jegyzetekkel, és keressük azokat a számokat, amelyek a jegyzetekben ritkábban találhatók meg, mint mások! Csak két cella tartalmaz 2-t és 6-ot. Ez azt jelenti, hogy a 2-nek az egyiket, a 6-nak pedig egy másikat kell elfoglalnia.
+
+Ezekben a cellákban semmilyen más szám nem lehetséges.
+
+\kep{1646980670-9. Hidden pairs_1.png}
+\kep{1646980679-9. Hidden pairs_2.png}
+
+E következtetés után a félreértések elkerülése érdekében a többlet számokat törölheti a megjegyzésekből.
+
+Tehát tudja, hogyan kell alkalmazni a ,,Rejtett párok'' technikát a Sudokuban. Most már itt az ideje egy kis gyakorlásnak!
+
+\clearpage
+\subsection{,,Rejtett hármas'' technika}
+
+A ,,rejtett hármas'' technika nagyon hasonlít a ,,Rejtett párok''-hoz, és ugyanazon a koncepción működik.
+
+A ,,Rejtett hármasok'' akkor érvényes, ha egy sorban, oszlopban vagy 3x3-as blokkban három cella ugyanazt a három megjegyzést tartalmazza. Ez a három cella további jelölteket is tartalmaz, amelyek eltávolíthatók belőlük.
+
+Könnyebb lesz megérteni ezt a technikát, ha megnézi a példát.
+
+Vessen egy pillantást a kiemelt cellákra. Csak három cella van, amelyek ismétlődő számokat tartalmaznak: 5, 6 és 7. Ez azt jelenti, hogy ezeknek a számoknak mindegyiknek el kell foglalnia egy ilyen cellát. És semmilyen más szám nem található itt. Ha igen, az 5,6 és 7 nem jeleníthető meg ennek a 3x3-as blokknak más cellájában sem.
+
+\kep{1672734920-10. Hidden triples_1.png}
+\kep{1672734932-10. Hidden triples_2.png}
+
+E következtetés után a félreértések elkerülése érdekében a többlet számokat törölheti a megjegyzésekből.
+
+Így működik a ,,Rejtett hármas'' technika a Sudoku megoldása közben.
+
+
+\subsection{,,Mutatópárok'' technika}
+
+A ,,mutatópárok'' akkor érvényesek, ha egy megjegyzés kétszer szerepel egy blokkban, és ez a megjegyzés is ugyanahhoz a sorhoz vagy oszlophoz tartozik. Ez azt jelenti, hogy a Note-nak kell megoldást adnia a blokk két cellájának egyikére. Így ezt a megjegyzést eltávolíthatja a sor vagy oszlop bármely más cellájából.
+
+A „mutatópárok” jobb megértéséhez vessünk egy pillantást a példára.
+
+Nézzük meg a blokkot a bal felső sarokban. Az összes cella, amely 4-es számot tartalmazhat, egy oszlopban található. Mivel a 4-es számnak legalább egyszer szerepelnie kell ebben a blokkban, az egyik kiemelt cellában biztosan 4 lesz.
+
+\kep{1646982767-11. Pointing pairs_1.png}
+\kep{1646982767-11. Pointing pairs_2.png}
+
+Így az összes többi lehetséges 4-et biztonságosan kiküszöbölhetjük ennek az oszlopnak az összes cellájából.
+
+Ne feledje, hogy ugyanezt a trükköt megteheti blokkokkal, sorokkal és oszlopokkal is.
+
+Ennyit a ,,Mutatópárok'' technikáról! Most folytathatja a következő Sudoku stratégiát:
+
+\clearpage
+\subsection{,,Mutató hármas'' technika}
+
+A ,,Mutató hármas'' technika nagyon hasonlít a ,,Mutatópárok'' technikához. Akkor érvényes, ha egy megjegyzés egy 3x3-as blokk csak három cellájában van jelen, és ugyanahhoz a sorhoz vagy oszlophoz tartozik. Ez azt jelenti, hogy a megjegyzésnek megoldást kell adnia a blokk három cellájának egyikére. Tehát nyilvánvalóan nem lehet megoldása a sorban vagy oszlopban lévő más celláknak, és ki lehet iktatni belőlük.
+
+Például:
+
+Vessünk egy pillantást a jobb alsó sarokra. Ebben a blokkban az 1-es számot tartalmazó összes cella egy sorban található. Mivel az 1-es számnak legalább egyszer szerepelnie kell a jobb alsó blokkban, az egyik kiemelt cellában biztosan 1 lesz.
+
+\kep{1646982168-12. Pointing triples _1.png}
+\kep{1646982173-12. Pointing triples _2.png}
+
+E következtetés után az összes többi lehetséges 1-es szám nyugodtan törölhető a sor megjegyzései közül a félreértés elkerülése érdekében.
+Ne feledje, hogy ugyanezt a trükköt megteheti blokkokkal, sorokkal és oszlopokkal is.
+Így működik a „Mutató hármasok” technika. Ha megtanultad, gyakorolhatsz egy kicsit.
+
+
+
+\subsection{,,X-szárny'' technika}
+
+Az X-szárny egy fejlett sudoku technika, amely két párhuzamos soron vagy két párhuzamos oszlopon alapul. Nem szabad figyelni a 3x3-as blokkokra, mivel ezek nem vesznek részt ebben a stratégiában.
+
+Könnyebb lesz megérteni ezt a technikát, ha megnézi a példát.
+
+Nézzük meg a két sort. Mindegyikben két cella található, amelyekben egy 4-es hang található. Mivel a 4-ek nem ismétlődnek ugyanabban a sorban vagy oszlopban, nyugodtan feltételezhetjük, hogy a 4-esek átlósan helyezkednek el – akár világoskék, akár sötétkék cellákba.
+
+\kep{1691408445-X-wing_1.png}
+
+Most kicsinyítsünk, és nézzük meg az érintett oszlopokat. Mivel a 4-esek átlósak, ezekben az oszlopokban már lesz egy 4-es szám. Ez azt jelenti, hogy nem írhatjuk újra.
+
+\kep{1691408472-X-wing_2.png}
+
+
+Tehát nyugodtan eltávolíthatunk 4-et a két oszlop összes többi jegyzetéből.
+
+Most már tudja, hogyan kell alkalmazni az X-Szárny technikát a Sudokuban, és folytathatja a következő fejlett Sudoku stratégiával: ,,Y-Szárny''.
+
+
+\clearpage
+\subsection{,,Y-szárny'' technika}
+
+Az ,,Y-Szárny'' technika hasonló az ,,X-Szárny''-hoz, de négy helyett három sarkon alapul.
+
+Nézzük meg ezt a technikát egy példán keresztül!
+
+Kezdésként meg kell találnunk egy cellát, amelyben pontosan két bejegyzés található. Ezt a cellát pillérnek nevezzük.
+
+Ezután keresünk még két cellát 2 bejegyzéssel! Ezeknek a celláknak (az úgynevezett fogóknak) ugyanabban a sorban, oszlopban vagy blokkban kell lenniük, mint a pillér. Az egyes fogókban lévő két szám közül az egyiknek meg kell egyeznie a pillérben szereplő számokkal. A másik szám mindkét fogónál azonos.
+
+\kep{1646984426-14. Y-wing_1.png}
+
+
+Most nézzük meg, hol metszi egymást a két fogó. Ez egy cella lenne az alsó sorban. Ha ez a cella olyan jegyzetet tartalmaz, amelyet mindkét fogó megoszt, akkor kiküszöbölhetjük. Ebben az esetben a 4-es szám az, mert mindkét fogóban 4 van.
+
+\kep{1646984432-14. Y-wing_2.png}
+
+Így működik az ,,Y-Szárny'' technika. Ez egy fejlett sudoku stratégia. Eltarthat egy kis időbe és gyakorlásba, mire megérti.
+
+
+
+\subsection{,,Kardhal'' technika}
+
+A ,,Kardhal'' technika egy fejlett Sudoku-stratégia. Általában a Sudoku rejtvények nehéz szintjein alkalmazzák a jelöltek kiiktatására. A ,,kardhal'' hasonló az X-szárnyhoz, de kettő helyett három sejtkészletet használ.
+
+A jobb megértéshez vessünk egy pillantást a példára.
+
+Ebben a rejtvényben a 6. a ,,halszámjegyünk'', az 1., 6. és 9. sor pedig az alapkészlet. A 6-os jelöltek 3 oszlopban is tökéletesen felsorakoznak. Tehát két lehetőség van a 6-os szám tartózkodására.
+
+\kep{1672735198-15. Swordfish_1.png}
+
+Akár errefelé
+
+\kep{1672735213-15. Swordfish_2.png}
+
+Vagy errefelé
+
+\kep{1672735217-15. Swordfish_3.png}
+
+Akárhogy is, ez a 3 halmaz lefedi az igazított oszlopokat, ami azt jelenti, hogy a 6 nem jelenhet meg kétszer ott. Ezért ezekben az oszlopokban nyugodtan kiiktathatjuk a 6-ot az összes többi megjegyzés közül.
+
+\kep{1673505183-15. Swordfish_4.png}
+
+Most már tudja, hogyan kell alkalmazni a „Kardhal” technikát a Sudokuban. Nagyon nehéz észrevenni, de rendkívül hasznos a sudoku-megoldó arzenál számára.
+
+\newpage
+
+\vspace*{4cm}
+
+\tableofcontents
+
+\end{document}
+

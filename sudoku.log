@@ -1,0 +1,616 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.6.7)  14 FEB 2024 19:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**sudoku.tex
+(./sudoku.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\c@figure=\count183
+\c@table=\count184
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count185
+\Gm@cntv=\count186
+\c@Gm@tempcnt=\count187
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count188
+\uc@combtoks=\toks19
+\uc@combtoksb=\toks20
+\uc@temptokena=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/01/26 3.53 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/01/26 3.53 Babel common definitions
+\babel@savecnt=\count189
+\U@D=\dimen147
+\l@babelnohyphens=\language36
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count190
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+Language: magyar 2019/01/14 v1.5c Magyar (Hungarian) support for babel
+Package babel Info: Making ` an active character on input line 2819.
+\c@footnote@add=\count191
+\c@footnote@ch=\count192
+))
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count193
+\lst@gtempboxa=\box47
+\lst@token=\toks22
+\lst@length=\count194
+\lst@currlwidth=\dimen148
+\lst@column=\count195
+\lst@pos=\count196
+\lst@lostspace=\dimen149
+\lst@width=\dimen150
+\lst@newlines=\count197
+\lst@lineno=\count198
+\lst@maxwidth=\dimen151
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count199
+\lst@skipnumbers=\count266
+\lst@framebox=\box48
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip49
+\cftbeforetoctitleskip=\skip50
+\cftaftertoctitleskip=\skip51
+\cftbeforepartskip=\skip52
+\cftpartnumwidth=\skip53
+\cftpartindent=\skip54
+\cftbeforesecskip=\skip55
+\cftsecindent=\skip56
+\cftsecnumwidth=\skip57
+\cftbeforesubsecskip=\skip58
+\cftsubsecindent=\skip59
+\cftsubsecnumwidth=\skip60
+\cftbeforesubsubsecskip=\skip61
+\cftsubsubsecindent=\skip62
+\cftsubsubsecnumwidth=\skip63
+\cftbeforeparaskip=\skip64
+\cftparaindent=\skip65
+\cftparanumwidth=\skip66
+\cftbeforesubparaskip=\skip67
+\cftsubparaindent=\skip68
+\cftsubparanumwidth=\skip69
+\cftbeforeloftitleskip=\skip70
+\cftafterloftitleskip=\skip71
+\cftbeforefigskip=\skip72
+\cftfigindent=\skip73
+\cftfignumwidth=\skip74
+\c@lofdepth=\count267
+\c@lotdepth=\count268
+\cftbeforelottitleskip=\skip75
+\cftafterlottitleskip=\skip76
+\cftbeforetabskip=\skip77
+\cfttabindent=\skip78
+\cfttabnumwidth=\skip79
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box49
+)
+(./sudoku.aux)
+\openout1 = `sudoku.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 478.0064pt, 34.14322pt)
+* v-part:(T,H,B)=(34.14322pt, 709.49698pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=478.0064pt
+* \textheight=709.49698pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=-38.12677pt
+* \topmargin=-75.12677pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+\c@lstlisting=\count270
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count271
+\scratchdimen=\dimen154
+\scratchbox=\box50
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count274
+\MPscratchDim=\dimen155
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+LaTeX Info: Redefining \cal on input line 497.
+LaTeX Info: Redefining \mit on input line 498.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 20.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 33.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 33.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 33.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<1646980448-1. Last Free Cell_1.png, id=12, 686.565pt x 686.565pt>
+File: 1646980448-1. Last Free Cell_1.png Graphic file (type png)
+<use 1646980448-1. Last Free Cell_1.png>
+Package pdftex.def Info: 1646980448-1. Last Free Cell_1.png  used on input line
+ 53.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646980448-1. Last Free Cell_2.png, id=13, 686.565pt x 686.565pt>
+File: 1646980448-1. Last Free Cell_2.png Graphic file (type png)
+<use 1646980448-1. Last Free Cell_2.png>
+Package pdftex.def Info: 1646980448-1. Last Free Cell_2.png  used on input line
+ 54.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 53--55
+[][] [] 
+ []
+
+<1646980448-1. Last Free Cell_3.png, id=14, 686.565pt x 686.565pt>
+File: 1646980448-1. Last Free Cell_3.png Graphic file (type png)
+<use 1646980448-1. Last Free Cell_3.png>
+Package pdftex.def Info: 1646980448-1. Last Free Cell_3.png  used on input line
+ 56.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646980448-1. Last Free Cell_4.png, id=15, 686.565pt x 686.565pt>
+File: 1646980448-1. Last Free Cell_4.png Graphic file (type png)
+<use 1646980448-1. Last Free Cell_4.png>
+Package pdftex.def Info: 1646980448-1. Last Free Cell_4.png  used on input line
+ 57.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 56--58
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 4608) has occurred while \output is active []
+
+ [2
+
+ <./1646980448-1. Last Free Cell_1.png> <./1646980448-1. Last Free Cell_2.png> 
+<./1646980448-1. Last Free Cell_3.png> <./1646980448-1. Last Free Cell_4.png>]
+<1646980980-2. Last remaining cell_1.png, id=20, 686.565pt x 686.565pt>
+File: 1646980980-2. Last remaining cell_1.png Graphic file (type png)
+<use 1646980980-2. Last remaining cell_1.png>
+Package pdftex.def Info: 1646980980-2. Last remaining cell_1.png  used on input
+ line 67.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646980980-2. Last remaining cell_2.png, id=21, 686.565pt x 686.565pt>
+File: 1646980980-2. Last remaining cell_2.png Graphic file (type png)
+<use 1646980980-2. Last remaining cell_2.png>
+Package pdftex.def Info: 1646980980-2. Last remaining cell_2.png  used on input
+ line 68.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 67--69
+[][] [] 
+ []
+
+[3 <./1646980980-2. Last remaining cell_1.png> <./1646980980-2. Last remaining 
+cell_2.png>]
+<1646981460-3. Last possible number_1.png, id=25, 686.565pt x 686.565pt>
+File: 1646981460-3. Last possible number_1.png Graphic file (type png)
+<use 1646981460-3. Last possible number_1.png>
+Package pdftex.def Info: 1646981460-3. Last possible number_1.png  used on inpu
+t line 81.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646981459-3. Last possible number_2.png, id=26, 686.565pt x 686.565pt>
+File: 1646981459-3. Last possible number_2.png Graphic file (type png)
+<use 1646981459-3. Last possible number_2.png>
+Package pdftex.def Info: 1646981459-3. Last possible number_2.png  used on inpu
+t line 82.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 81--83
+[][] [] 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+<1646982336-5. Obvious singles_1.png, id=27, 686.565pt x 686.565pt>
+File: 1646982336-5. Obvious singles_1.png Graphic file (type png)
+<use 1646982336-5. Obvious singles_1.png>
+Package pdftex.def Info: 1646982336-5. Obvious singles_1.png  used on input lin
+e 105.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646982336-5. Obvious singles_2.png, id=28, 686.565pt x 686.565pt>
+File: 1646982336-5. Obvious singles_2.png Graphic file (type png)
+<use 1646982336-5. Obvious singles_2.png>
+Package pdftex.def Info: 1646982336-5. Obvious singles_2.png  used on input lin
+e 106.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 105--107
+[][] [] 
+ []
+
+[4
+
+ <./1646981460-3. Last possible number_1.png> <./1646981459-3. Last possible nu
+mber_2.png>] [5 <./1646982336-5. Obvious singles_1.png> <./1646982336-5. Obviou
+s singles_2.png>]
+<1646982773-6. Obvious pairs.png, id=35, 686.565pt x 686.565pt>
+File: 1646982773-6. Obvious pairs.png Graphic file (type png)
+<use 1646982773-6. Obvious pairs.png>
+Package pdftex.def Info: 1646982773-6. Obvious pairs.png  used on input line 12
+1.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646983350-7. Obvious triples_1.png, id=36, 686.565pt x 686.565pt>
+File: 1646983350-7. Obvious triples_1.png Graphic file (type png)
+<use 1646983350-7. Obvious triples_1.png>
+Package pdftex.def Info: 1646983350-7. Obvious triples_1.png  used on input lin
+e 136.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646983351-7. Obvious triples_2.png, id=37, 686.565pt x 686.565pt>
+File: 1646983351-7. Obvious triples_2.png Graphic file (type png)
+<use 1646983351-7. Obvious triples_2.png>
+Package pdftex.def Info: 1646983351-7. Obvious triples_2.png  used on input lin
+e 137.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 136--138
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
+
+ <./1646982773-6. Obvious pairs.png>]
+<1646983350-7. Obvious triples_3.png, id=41, 686.565pt x 686.565pt>
+File: 1646983350-7. Obvious triples_3.png Graphic file (type png)
+<use 1646983350-7. Obvious triples_3.png>
+Package pdftex.def Info: 1646983350-7. Obvious triples_3.png  used on input lin
+e 139.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+ [7 <./1646983350-7. Obvious triples_1.png> <./1646983351-7. Obvious triples_2.
+png> <./1646983350-7. Obvious triples_3.png>]
+<1646984732-8. Hidden singles_1.png, id=46, 686.565pt x 686.565pt>
+File: 1646984732-8. Hidden singles_1.png Graphic file (type png)
+<use 1646984732-8. Hidden singles_1.png>
+Package pdftex.def Info: 1646984732-8. Hidden singles_1.png  used on input line
+ 152.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646984732-8. Hidden singles_2.png, id=47, 686.565pt x 686.565pt>
+File: 1646984732-8. Hidden singles_2.png Graphic file (type png)
+<use 1646984732-8. Hidden singles_2.png>
+Package pdftex.def Info: 1646984732-8. Hidden singles_2.png  used on input line
+ 153.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 152--154
+[][] [] 
+ []
+
+<1646980670-9. Hidden pairs_1.png, id=48, 686.565pt x 686.565pt>
+File: 1646980670-9. Hidden pairs_1.png Graphic file (type png)
+<use 1646980670-9. Hidden pairs_1.png>
+Package pdftex.def Info: 1646980670-9. Hidden pairs_1.png  used on input line 1
+70.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646980679-9. Hidden pairs_2.png, id=49, 686.565pt x 686.565pt>
+File: 1646980679-9. Hidden pairs_2.png Graphic file (type png)
+<use 1646980679-9. Hidden pairs_2.png>
+Package pdftex.def Info: 1646980679-9. Hidden pairs_2.png  used on input line 1
+71.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 170--172
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
+
+ <./1646984732-8. Hidden singles_1.png> <./1646984732-8. Hidden singles_2.png>]
+
+[9 <./1646980670-9. Hidden pairs_1.png> <./1646980679-9. Hidden pairs_2.png>]
+<1672734920-10. Hidden triples_1.png, id=56, 686.565pt x 686.565pt>
+File: 1672734920-10. Hidden triples_1.png Graphic file (type png)
+<use 1672734920-10. Hidden triples_1.png>
+Package pdftex.def Info: 1672734920-10. Hidden triples_1.png  used on input lin
+e 188.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1672734932-10. Hidden triples_2.png, id=57, 686.565pt x 686.565pt>
+File: 1672734932-10. Hidden triples_2.png Graphic file (type png)
+<use 1672734932-10. Hidden triples_2.png>
+Package pdftex.def Info: 1672734932-10. Hidden triples_2.png  used on input lin
+e 189.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 188--190
+[][] [] 
+ []
+
+<1646982767-11. Pointing pairs_1.png, id=58, 686.565pt x 686.565pt>
+File: 1646982767-11. Pointing pairs_1.png Graphic file (type png)
+<use 1646982767-11. Pointing pairs_1.png>
+Package pdftex.def Info: 1646982767-11. Pointing pairs_1.png  used on input lin
+e 204.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646982767-11. Pointing pairs_2.png, id=59, 686.565pt x 686.565pt>
+File: 1646982767-11. Pointing pairs_2.png Graphic file (type png)
+<use 1646982767-11. Pointing pairs_2.png>
+Package pdftex.def Info: 1646982767-11. Pointing pairs_2.png  used on input lin
+e 205.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 204--206
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10
+
+ <./1672734920-10. Hidden triples_1.png> <./1672734932-10. Hidden triples_2.png
+>]
+[11 <./1646982767-11. Pointing pairs_1.png> <./1646982767-11. Pointing pairs_2.
+png>]
+<1646982168-12. Pointing triples _1.png, id=66, 686.565pt x 686.565pt>
+File: 1646982168-12. Pointing triples _1.png Graphic file (type png)
+<use 1646982168-12. Pointing triples _1.png>
+Package pdftex.def Info: 1646982168-12. Pointing triples _1.png  used on input 
+line 222.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646982173-12. Pointing triples _2.png, id=67, 686.565pt x 686.565pt>
+File: 1646982173-12. Pointing triples _2.png Graphic file (type png)
+<use 1646982173-12. Pointing triples _2.png>
+Package pdftex.def Info: 1646982173-12. Pointing triples _2.png  used on input 
+line 223.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Overfull \hbox (20.23529pt too wide) in paragraph at lines 222--224
+[][] [] 
+ []
+
+<1691408445-X-wing_1.png, id=68, 686.565pt x 686.565pt>
+File: 1691408445-X-wing_1.png Graphic file (type png)
+<use 1691408445-X-wing_1.png>
+Package pdftex.def Info: 1691408445-X-wing_1.png  used on input line 239.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
+
+ <./1646982168-12. Pointing triples _1.png> <./1646982173-12. Pointing triples 
+_2.png>]
+<1691408472-X-wing_2.png, id=72, 686.565pt x 686.565pt>
+File: 1691408472-X-wing_2.png Graphic file (type png)
+<use 1691408472-X-wing_2.png>
+Package pdftex.def Info: 1691408472-X-wing_2.png  used on input line 243.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+ [13 <./1691408445-X-wing_1.png (PNG copy)> <./1691408472-X-wing_2.png (PNG cop
+y)>]
+<1646984426-14. Y-wing_1.png, id=77, 686.565pt x 686.565pt>
+File: 1646984426-14. Y-wing_1.png Graphic file (type png)
+<use 1646984426-14. Y-wing_1.png>
+Package pdftex.def Info: 1646984426-14. Y-wing_1.png  used on input line 262.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1646984432-14. Y-wing_2.png, id=78, 686.565pt x 686.565pt>
+File: 1646984432-14. Y-wing_2.png Graphic file (type png)
+<use 1646984432-14. Y-wing_2.png>
+Package pdftex.def Info: 1646984432-14. Y-wing_2.png  used on input line 267.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+ [14
+
+ <./1646984426-14. Y-wing_1.png> <./1646984432-14. Y-wing_2.png>]
+<1672735198-15. Swordfish_1.png, id=82, 686.565pt x 686.565pt>
+File: 1672735198-15. Swordfish_1.png Graphic file (type png)
+<use 1672735198-15. Swordfish_1.png>
+Package pdftex.def Info: 1672735198-15. Swordfish_1.png  used on input line 281
+.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1672735213-15. Swordfish_2.png, id=83, 686.565pt x 686.565pt>
+File: 1672735213-15. Swordfish_2.png Graphic file (type png)
+<use 1672735213-15. Swordfish_2.png>
+Package pdftex.def Info: 1672735213-15. Swordfish_2.png  used on input line 285
+.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+<1672735217-15. Swordfish_3.png, id=84, 686.565pt x 686.565pt>
+File: 1672735217-15. Swordfish_3.png Graphic file (type png)
+<use 1672735217-15. Swordfish_3.png>
+Package pdftex.def Info: 1672735217-15. Swordfish_3.png  used on input line 289
+.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./1672735198-15. Swordfish_1.png> <./1672735213-15. Swordfish_2.png>]
+<1673505183-15. Swordfish_4.png, id=88, 686.565pt x 686.565pt>
+File: 1673505183-15. Swordfish_4.png Graphic file (type png)
+<use 1673505183-15. Swordfish_4.png>
+Package pdftex.def Info: 1673505183-15. Swordfish_4.png  used on input line 293
+.
+(pdftex.def)             Requested size: 239.00319pt x 239.0023pt.
+ [16 <./1672735217-15. Swordfish_3.png> <./1673505183-15. Swordfish_4.png>] (./
+sudoku.toc)
+\tf@toc=\write3
+\openout3 = `sudoku.toc'.
+
+
+[17] (./sudoku.aux) ) 
+Here is how much of TeX's memory you used:
+ 6859 strings out of 480550
+ 104549 string characters out of 5896696
+ 404441 words of memory out of 5000000
+ 23770 multiletter control sequences out of 15000+600000
+ 412816 words of font info for 47 fonts, out of 8000000 for 9000
+ 417 hyphenation exceptions out of 8191
+ 68i,6n,74p,485b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecbx1200.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1440.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/
+tcrm1200.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+rm1200.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+1728.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm14
+40.600pk> </home/pp/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074
+.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+>
+Output written on sudoku.pdf (17 pages, 2049530 bytes).
+PDF statistics:
+ 318 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+
